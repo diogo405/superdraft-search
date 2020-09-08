@@ -1,0 +1,40 @@
+.project {
+	box-shadow: 1px 1px 4px 1px lightgrey;
+    width: calc(25% - 30px);
+    margin-right: 40px;
+    margin-top: 40px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 20px;
+    min-height: 220px;
+}
+.project:nth-child(4n) {
+	margin-right: 0;
+}
+.project__name {
+	font-size: 12px;
+	font-weight: 200;
+	color: var(--grey);
+	margin-top: 10px;
+}
+.project__sep {
+	border-top: 1px solid var(--blue);
+    margin: 20px 0;
+}
+.project__number {
+	font-size: 16px;
+	font-weight: 600;
+}
+.project__client {
+	color: grey;
+	display: block;
+	font-size: 14px;
+	font-weight: 200;
+}
+.project__stage {
+	color: var(--grey);
+	display: block;
+	font-size: 10px;
+	font-weight: 200;
+	margin-top: 20px;	
+}

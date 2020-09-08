@@ -3,6 +3,7 @@ import './App.css'
 import Logo from './components/Logo.js'
 import Loading from './components/Loading.js'
 import Feedback from './components/Feedback.js'
+import Projects from './components/Projects.js'
 import axios from 'axios'
 
 class App extends React.Component {
@@ -40,6 +41,7 @@ class App extends React.Component {
                 <Logo/>
                 <Loading title="Fetching projects" visible={this.state.loading}/>
                 <Feedback message="Oops something went wrong 🤷🏻‍♀️" visible={this.state.isFeedbackVisible}/>
+                <Projects projects={this.state.projects}/>
             </div>
         )
     }

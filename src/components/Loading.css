@@ -11,7 +11,7 @@
 .loading__title {
     color: var(--grey);
     font-size: 48px;
-    font-weight: 700;
+    font-weight: 600;
 }
 .loading__ellipsis {
     display: inline-block;
