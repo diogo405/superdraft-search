@@ -1,0 +1,12 @@
+.fback {
+	display: none;
+	/* align vertically: see Loading.css */
+    margin: calc(50vh - 100px - 64px) 25px 0 25px;
+    color: var(--grey);
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+}
+.fback--active {
+	display: block;
+}
