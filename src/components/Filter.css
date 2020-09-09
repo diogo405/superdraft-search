@@ -1,0 +1,88 @@
+.filter {
+	padding: 40px 100px 60px 100px;
+	background-color: var(--lightBlue);
+	display: none;
+}
+.filter--active {
+	display: block;
+}
+.filter__form {}
+.filter__form--hidden {
+	display: none;
+}
+.filter__title {
+	font-size: 16px;
+    font-weight: 600;
+}
+.filter__row {
+	display: flex;
+    margin-top: 20px;
+}
+.filter__field {
+	width: calc(100% - 50px);
+	margin-right: calc(50px + (50px / 3));
+}
+.filter__field:last-child {
+	margin-right: 0;
+}
+.filter__field--single {
+	width: 100%;
+	margin-right: 0;	
+}
+.filter__label {
+	display: block;
+    font-size: 12px;
+}
+.filter__input {
+	border: 1px solid lightgrey;
+    margin-top: 3px;
+    padding: 7px 7px;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+.filter__input:focus {
+	border: 1px solid var(--dark);
+}
+select.filter__input {
+	-webkit-appearance: none;
+}
+.filter__select-wrap {
+	position: relative;
+}
+.filter__select-wrap:after {
+	display: block;
+    position: absolute;
+    content: '\003E';
+    right: 10px;
+    bottom: 8px;
+    transform: rotate(90deg);
+    font-size: 15px;
+    color: grey;
+}
+.filter__link {
+	cursor: pointer;
+    text-decoration: underline;
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 12px;
+    color: darkgrey;
+}
+.filter__button {
+	background-color: var(--pink);
+    padding: 10px 30px;
+    color: white;
+    display: flex;
+    margin-left: auto;
+    margin-top: 30px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: 3px solid var(--pink);
+    transition: all 350ms ease;
+}
+.filter__button:hover {
+	background-color: transparent;
+	color: var(--pink);
+}

@@ -14,11 +14,11 @@
 .project__name {
 	font-size: 12px;
 	font-weight: 200;
-	color: var(--grey);
+	color: grey;
 	margin-top: 10px;
 }
 .project__sep {
-	border-top: 1px solid var(--blue);
+	border-top: 2px solid var(--blue);
     margin: 20px 0;
 }
 .project__number {
@@ -32,7 +32,7 @@
 	font-weight: 200;
 }
 .project__stage {
-	color: var(--grey);
+	color: grey;
 	display: block;
 	font-size: 10px;
 	font-weight: 200;
