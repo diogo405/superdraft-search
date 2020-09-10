@@ -6,3 +6,9 @@
 .projects--active {
 	display: flex;
 }
+
+@media (max-width: 768px) {
+	.projects {
+	    padding: 50px 50px 100px 50px;
+	}
+}
