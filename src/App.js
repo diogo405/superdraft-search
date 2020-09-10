@@ -1,5 +1,4 @@
 import React from 'react'
-import axios from 'axios'
 import ReactPaginate from 'react-paginate'
 import './App.css'
 import './components/pagination.css'
@@ -7,6 +6,7 @@ import Loading from './components/Loading.js'
 import Feedback from './components/Feedback.js'
 import Projects from './components/Projects.js'
 import Filter from './components/Filter.js'
+import getProjects from './components/Api.js'
 
 class App extends React.Component {
     state = {
@@ -31,14 +31,7 @@ class App extends React.Component {
     fetchProjects = async () => {
         try {
             this.setState({loading: true, isFeedbackVisible: false})
-            const {data} = await axios.get(process.env.REACT_APP_API_URL, {
-                auth: {
-                    username: process.env.REACT_APP_API_USERNAME,
-                    password: process.env.REACT_APP_API_PWD
-                }
-            })
-            console.log('data', data)
-
+            const {data} = await getProjects()
             this.setState({
                 projects: data.projects, 
                 pagination: this.getPagination(data),
@@ -57,18 +50,12 @@ class App extends React.Component {
         }
     }
 
-    onFilter = async (form) => {
+    onFilter = async (form = this.state.filterForm) => {
         try {
             this.setState({loading: true, isFeedbackVisible: false, isProjectsVisible: false, isPaginationVisible: false, filterForm: form})
             const queryParams = this.getQueryParams()
-            const {data} = await axios.get(`${process.env.REACT_APP_API_URL}?${queryParams}`, {
-                auth: {
-                    username: process.env.REACT_APP_API_USERNAME,
-                    password: process.env.REACT_APP_API_PWD
-                }
-            })
+            const {data} = await getProjects(queryParams)
 
-            console.log('data', data)
             this.setState({
                 projects: data.projects, 
                 pagination: this.getPagination(data),
@@ -86,13 +73,12 @@ class App extends React.Component {
         let pagination = {}
         pagination.pageCount = Math.ceil(data.total / parseInt(data.itemPerPage))
         pagination.page = parseInt(data.page)
-        console.log('pagination', pagination)
         return pagination
     }
 
     onPageClick = (data) => {
         this.setState({ pagination: { page: data.selected + 1} }, () => {
-            this.onFilter(this.state.filterForm)
+            this.onFilter()
         })
     };
 
