@@ -1,7 +1,7 @@
 .projects {
 	display: none;
 	flex-wrap: wrap;
-	padding: 0 100px 100px 100px;
+	padding: 50px 100px 100px 100px;
 }
 .projects--active {
 	display: flex;
