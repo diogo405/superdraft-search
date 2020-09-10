@@ -1,4 +1,7 @@
 .logo {
 	display: block;
-    padding: 25px;
+    position: absolute;
+    width: 150px;
+    top: 20px;
+    left: 100px;
 }

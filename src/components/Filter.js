@@ -1,6 +1,7 @@
 import React from 'react'
 import { Formik, Field, Form } from 'formik';
 import './Filter.css'
+import Logo from './Logo.js'
 
 class Filter extends React.Component {
 
@@ -26,6 +27,7 @@ class Filter extends React.Component {
         			this.props.onFilter(values)
       		}}>
       			<Form className={filterClass}>
+      				<Logo/>
 					<h2 className="filter__title">Filter by</h2>
 					<div className="filter__row">
 						<div className="filter__field">
@@ -41,7 +43,7 @@ class Filter extends React.Component {
 							<Field className="filter__input" name="address" placeholder="e.g. Surfers Paradise"/>
 						</div>
 					</div>
-					<span className="filter__link" onClick={() => this.setState({isMoreOptionsVisible: true})}>More options</span>
+					<span className="filter__link" onClick={() => this.setState({isMoreOptionsVisible: !this.state.isMoreOptionsVisible})}>{this.state.isMoreOptionsVisible ? 'Less options' : 'More options'}</span>
 					<div className={moreOptionsFormClass}>
 						<div className="filter__row">
 							<div className="filter__field">
@@ -94,7 +96,6 @@ class Filter extends React.Component {
 								<Field className="filter__input" name="stage_title" placeholder="e.g. Development Approval"/>
 							</div>
 						</div>
-						<span className="filter__link" onClick={() => this.setState({isMoreOptionsVisible: false})}>Less options</span>
 					</div>
 					<button className="filter__button" type="submit">Filter</button>
 				</Form>

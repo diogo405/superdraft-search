@@ -1,6 +1,6 @@
 import React from 'react'
 import './Logo.css'
-import logo from '../images/logo.png'
+import logo from '../images/logo.svg'
 
 function Logo() {
     return (

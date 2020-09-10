@@ -9,6 +9,9 @@ function Project(props) {
 			<hr className="project__sep"/>
 			<span className="project__client">{props.project.client_name}</span>
 			<span className="project__stage">{props.project.active_stage}</span>
+			<div className="project__members">
+				{props.project.members && props.project.members.map(m => <div className="project__member" title={m.name}>{m.name.substring(0, 1)}</div>)}
+			</div>
 		</div>
 	)
 }

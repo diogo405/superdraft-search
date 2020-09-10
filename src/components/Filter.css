@@ -13,6 +13,7 @@
 .filter__title {
 	font-size: 16px;
     font-weight: 600;
+    margin-top: 50px;
 }
 .filter__row {
 	display: flex;
@@ -36,7 +37,7 @@
 .filter__input {
 	border: 1px solid lightgrey;
     margin-top: 3px;
-    padding: 7px 7px;
+    padding: 10px;
     border-radius: 5px;
     width: 100%;
     box-sizing: border-box;
@@ -80,9 +81,8 @@ select.filter__input {
     border-radius: 5px;
     box-sizing: border-box;
     border: 3px solid var(--pink);
-    transition: all 350ms ease;
+    transition: all 250ms ease;
 }
 .filter__button:hover {
-	background-color: transparent;
-	color: var(--pink);
+	background-color: #ff4e8ecc;
 }

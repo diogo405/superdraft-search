@@ -1,6 +1,5 @@
 import React from 'react'
 import './App.css'
-import Logo from './components/Logo.js'
 import Loading from './components/Loading.js'
 import Feedback from './components/Feedback.js'
 import Projects from './components/Projects.js'
@@ -93,11 +92,10 @@ class App extends React.Component {
     render = () => {
         return (
             <div className="app">
-                <Logo/>
                 <Filter visible={this.state.isFilterVisible} states={this.state.states} status={this.state.status} eta={this.state.eta} communication={this.state.communication} onFilter={this.onFilter}/>
                 <Feedback message="Oops something went wrong 🤷🏻‍♀️" visible={this.state.isFeedbackVisible}/>
                 <Loading title="Fetching projects" visible={this.state.loading}/>
-                <Projects projects={this.state.projects}/>
+                <Projects projects={this.state.projects} visible={this.state.isProjectsVisible}/>
             </div>
         )
     }
