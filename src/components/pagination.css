@@ -1,0 +1,26 @@
+.pag {
+	display: none;
+    justify-content: flex-end;
+    font-size: 14px;
+    background-color: var(--lightBlue);
+    padding: 20px;
+}
+.pag--active {
+	display: flex;
+}
+.pag li {
+	cursor: pointer;
+	padding: 5px 10px;
+	margin-right: 10px;
+}
+.pag .disabled {
+	color: lightgrey;
+	cursor: not-allowed;
+}
+.pag__sub {}
+.pag__break {}
+.pag__active {
+	background-color: var(--pink);
+	color: white;
+	border-radius: 2px;
+}

@@ -50,7 +50,7 @@ class Filter extends React.Component {
 								<label className="filter__label">State</label>
 								<div className="filter__select-wrap">
 									<Field as="select" className="filter__input" name="state">
-										<option>Select...</option>
+										<option value="">Select...</option>
 										{this.props.states.map(s => <option key={s.value} value={s.value}>{s.name}</option>)}
 									</Field>
 								</div>

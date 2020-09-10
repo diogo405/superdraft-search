@@ -1,10 +1,13 @@
 .projects {
 	display: none;
 	flex-wrap: wrap;
-	padding: 50px 100px 100px 100px;
+	padding: 50px 100px 50px 100px;
 }
 .projects--active {
 	display: flex;
+}
+.projects__noresults {
+	
 }
 
 @media (max-width: 768px) {

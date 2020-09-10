@@ -73,6 +73,9 @@
 }
 
 @media (max-width: 768px) {
+    .loading {
+        margin-top: 50px;
+    }
     .loading__title {
         font-size: 22px;
     }
