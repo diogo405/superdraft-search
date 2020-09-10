@@ -77,16 +77,15 @@ class App extends React.Component {
     }
 
     onPageClick = (data) => {
-        this.setState({ pagination: { page: data.selected + 1} }, () => {
+        this.setState({ filterForm: { page: data.selected + 1} }, () => {
             this.onFilter()
         })
-    };
+    }
 
     getQueryParams = () => {
-       let queryParams = Object.keys(this.state.filterForm).map((key) => {
+       return Object.keys(this.state.filterForm).map((key) => {
             return `${encodeURIComponent(key)}=${encodeURIComponent(this.state.filterForm[key])}`
         }).join('&') 
-       return `${queryParams}&page=${this.state.pagination.page}`
     }
 
     render = () => {
@@ -97,6 +96,7 @@ class App extends React.Component {
                 <Loading title="Fetching projects" visible={this.state.loading}/>
                 <Projects projects={this.state.projects} visible={this.state.isProjectsVisible}/>
                 <ReactPaginate
+                    forcePage={this.state.filterForm.page ? this.state.filterForm.page - 1 : 0}
                     previousLabel={'previous'}
                     nextLabel={'next'}
                     breakLabel={'...'}

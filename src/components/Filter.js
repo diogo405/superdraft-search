@@ -20,10 +20,10 @@ class Filter extends React.Component {
 					status: '',
 					eta_status: '',
 					communication: '',
-					stage_title: ''
+					stage_title: '',
+					page: 1
 				}}
 				onSubmit={values => {
-        			console.log(values)
         			this.props.onFilter(values)
       		}}>
       			<Form className={filterClass}>
