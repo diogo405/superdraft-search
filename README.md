@@ -8,7 +8,7 @@ When the page is loaded it makes an API request to fetch the projects (and form)
 `npm run start`
 
 ## Architecture
-App.js is the central point. It calls the API and shows / hides the components on page based on the API response. 
+App.js is the central point. It calls the API and shows / hides the components based on the API response. 
 
 ### Filtering
 Filter.js receives a callback via props which is triggered every time the filter button is clicked. The callback has the form as argument and is executed in App.js to call the API.
