@@ -72,6 +72,7 @@ class App extends React.Component {
     getPagination = (data) => {
         let pagination = {}
         pagination.pageCount = Math.ceil(data.total / parseInt(data.itemPerPage))
+        pagination.total = data.total
         pagination.page = parseInt(data.page)
         return pagination
     }
@@ -94,7 +95,7 @@ class App extends React.Component {
                 <Filter visible={this.state.isFilterVisible} states={this.state.states} status={this.state.status} eta={this.state.eta} communication={this.state.communication} onFilter={this.onFilter}/>
                 <Feedback message="Oops something went wrong 🤷🏻‍♀️" visible={this.state.isFeedbackVisible}/>
                 <Loading title="Fetching projects" visible={this.state.loading}/>
-                <Projects projects={this.state.projects} visible={this.state.isProjectsVisible}/>
+                <Projects total={this.state.pagination.total} projects={this.state.projects} visible={this.state.isProjectsVisible}/>
                 <ReactPaginate
                     forcePage={this.state.filterForm.page ? this.state.filterForm.page - 1 : 0}
                     previousLabel={'previous'}

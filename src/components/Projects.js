@@ -7,9 +7,14 @@ function Projects(props) {
 	const projects = props.projects ? 
 		props.projects.map(p => <Project project={p} key={p.number}/>) :
 		<div className="projects__noresults">No results found.</div>
+	const projectsTitle = props.projects ? <h2 className="projects__title">Showing {props.projects.length}/{props.total} projects</h2> : ''
+
 	return (
 		<div className={projectsClassName}>
-			{projects}
+			{projectsTitle}
+			<div className="projects__cont">
+				{projects}
+			</div>
 		</div>
 	)
 }

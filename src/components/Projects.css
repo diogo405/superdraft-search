@@ -1,13 +1,21 @@
 .projects {
 	display: none;
-	flex-wrap: wrap;
 	padding: 50px 100px 50px 100px;
 }
-.projects--active {
+.projects__cont {
 	display: flex;
+	flex-wrap: wrap;
+}
+.projects--active {
+	display: block;
 }
 .projects__noresults {
 	
+}
+.projects__title {
+	margin-bottom: 20px;
+    font-size: 14px;
+    color: darkgrey;
 }
 
 @media (max-width: 768px) {
