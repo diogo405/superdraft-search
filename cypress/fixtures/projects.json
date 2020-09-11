@@ -1,0 +1,1621 @@
+{
+    "appendPageClass": "table_view",
+    "dashboardBtn": true,
+    "enableClientColumn": true,
+    "enableCookie": true,
+    "filterMenuItems": false,
+    "form": {
+        "buttons": [
+            {
+                "class": "s_btn",
+                "id": "submit_project_search_form",
+                "text": "Search"
+            },
+            {
+                "class": "s_btn gray",
+                "id": "rest_project_search_form",
+                "text": "Clear"
+            },
+            {
+                "class": "s_btn red",
+                "id": "exportCSV",
+                "text": "Export To CSV"
+            }
+        ],
+        "class": "project_seach_form",
+        "id": "project_seach_form",
+        "inputs": [
+            {
+                "class": false,
+                "id": false,
+                "label": false,
+                "name": "client_full_name",
+                "placeholder": "Client Name",
+                "type": "text"
+            },
+            {
+                "class": false,
+                "id": false,
+                "label": false,
+                "name": "project_number",
+                "placeholder": "Project Number",
+                "type": "text"
+            },
+            {
+                "class": false,
+                "id": false,
+                "label": false,
+                "name": "address",
+                "placeholder": "Street, Address Line 2 Or Suburb",
+                "type": "text"
+            },
+            {
+                "class": false,
+                "id": false,
+                "label": "State",
+                "name": "state",
+                "options": [
+                    {
+                        "name": "Australian Capital Territory",
+                        "value": 3
+                    },
+                    {
+                        "name": "New South Wales",
+                        "value": 2
+                    },
+                    {
+                        "name": "Northern Territory",
+                        "value": 7
+                    },
+                    {
+                        "name": "Other",
+                        "value": 9
+                    },
+                    {
+                        "name": "Queensland",
+                        "value": 1
+                    },
+                    {
+                        "name": "South Australia",
+                        "value": 6
+                    },
+                    {
+                        "name": "Tasmania",
+                        "value": 5
+                    },
+                    {
+                        "name": "Victoria",
+                        "value": 4
+                    },
+                    {
+                        "name": "Western Australia",
+                        "value": 8
+                    }
+                ],
+                "placeholder": "Please Select State...",
+                "type": "multi_select"
+            },
+            {
+                "class": "search_team",
+                "id": "search_partner",
+                "label": false,
+                "name": "team_id[]",
+                "placeholder": "Search Partner",
+                "type": "search_team"
+            },
+            {
+                "class": "search_team",
+                "id": "search_admin",
+                "label": false,
+                "name": "team_id[]",
+                "placeholder": "Search Staff",
+                "type": "search_team"
+            },
+            {
+                "class": false,
+                "id": false,
+                "label": "Status",
+                "name": "status",
+                "options": [
+                    {
+                        "name": "All Active Status",
+                        "value": "active"
+                    },
+                    {
+                        "name": "Archived",
+                        "value": "archived"
+                    },
+                    {
+                        "name": "OSDC",
+                        "value": 5
+                    },
+                    {
+                        "name": "Active",
+                        "value": 0
+                    },
+                    {
+                        "name": "In Council",
+                        "value": 4
+                    },
+                    {
+                        "name": "Build Tender",
+                        "value": 6
+                    },
+                    {
+                        "name": "Completed",
+                        "value": 1
+                    },
+                    {
+                        "name": "On Hold",
+                        "value": 2
+                    },
+                    {
+                        "name": "Cancelled",
+                        "value": 3
+                    },
+                    {
+                        "name": "All",
+                        "value": "all"
+                    }
+                ],
+                "type": "select"
+            },
+            {
+                "class": false,
+                "id": false,
+                "label": "ETA Report",
+                "name": "eta_status",
+                "options": [
+                    {
+                        "name": "Search By ETA",
+                        "value": ""
+                    },
+                    {
+                        "name": "ETA On Track",
+                        "value": "on_track"
+                    },
+                    {
+                        "name": "ETA Approaching",
+                        "value": "eta_overdue_soon"
+                    },
+                    {
+                        "name": "ETA Overdue",
+                        "value": "eta_fall"
+                    },
+                    {
+                        "name": "ETA Not Set",
+                        "value": "eta_not_set"
+                    }
+                ],
+                "type": "select"
+            },
+            {
+                "class": false,
+                "id": false,
+                "label": "Communication",
+                "name": "communication",
+                "options": [
+                    {
+                        "name": "Search by Communication Status",
+                        "value": ""
+                    },
+                    {
+                        "name": "No Communication",
+                        "value": "search_none_communication"
+                    },
+                    {
+                        "name": "Poor Communication",
+                        "value": "search_poor_communication"
+                    },
+                    {
+                        "name": "Average Communication",
+                        "value": "search_average_communication"
+                    },
+                    {
+                        "name": "Frequent Communication",
+                        "value": "search_frequent_communication"
+                    }
+                ],
+                "type": "select"
+            },
+            {
+                "class": "col-12",
+                "id": false,
+                "label": false,
+                "name": "stage_title",
+                "placeholder": "Search Stage Title",
+                "type": "text"
+            }
+        ],
+        "title": "Search"
+    },
+    "itemPerPage": "30",
+    "message": "",
+    "page": 1,
+    "projects": [
+        {
+            "active_stage": "Building Quote Service",
+            "buttons": [
+                {
+                    "class": "editProject",
+                    "id": "editProject_311",
+                    "name": "Edit",
+                    "type": "jsBtn",
+                    "url": false
+                },
+                {
+                    "class": "deleteProject",
+                    "id": "deleteProject_311",
+                    "name": "Delete",
+                    "type": "jsBtn",
+                    "url": false
+                }
+            ],
+            "client_name": "Johnny Client",
+            "color": "#EE508B",
+            "designer": false,
+            "enableStageEdit": "editProjectStage",
+            "enableStageEditId": "enableStageEdit_311_1351",
+            "id": 311,
+            "members": false,
+            "number": "SD999",
+            "overDucHighLight": false,
+            "projectManager": " ",
+            "projectStageDue": "-",
+            "projectStageId": 1351,
+            "projectStageProgress": 0,
+            "projectStageStart": "11/09/2020",
+            "projectState": "Tasmania",
+            "projectStatus": "Active",
+            "projectTeamMemberName": false,
+            "rgbColor": {
+                "b": 139,
+                "g": 80,
+                "r": 238
+            },
+            "textColor": "#EE508B",
+            "title": "999 liverpool street, hobart, TAS 7001",
+            "url": "https://development.archix.com/projects/311"
+        },
+        {
+            "active_stage": "Preliminary Design Review Service",
+            "buttons": [
+                {
+                    "class": "editProject",
+                    "id": "editProject_310",
+                    "name": "Edit",
+                    "type": "jsBtn",
+                    "url": false
+                },
+                {
+                    "class": "deleteProject",
+                    "id": "deleteProject_310",
+                    "name": "Delete",
+                    "type": "jsBtn",
+                    "url": false
+                }
+            ],
+            "client_name": "Johnny Client",
+            "color": "#EE508B",
+            "designer": false,
+            "enableStageEdit": "editProjectStage",
+            "enableStageEditId": "enableStageEdit_310_1348",
+            "id": 310,
+            "members": false,
+            "number": "SD20-2047",
+            "overDucHighLight": false,
+            "projectManager": " ",
+            "projectStageDue": "-",
+            "projectStageId": 1348,
+            "projectStageProgress": 0,
+            "projectStageStart": "11/09/2020",
+            "projectState": "Tasmania",
+            "projectStatus": "Active",
+            "projectTeamMemberName": false,
+            "rgbColor": {
+                "b": 139,
+                "g": 80,
+                "r": 238
+            },
+            "textColor": "#EE508B",
+            "title": "181 liverpool street, hobart, TAS 7001",
+            "url": "https://development.archix.com/projects/310"
+        },
+        {
+            "active_stage": "Development Approval Drawings Stage",
+            "buttons": [
+                {
+                    "class": "editProject",
+                    "id": "editProject_309",
+                    "name": "Edit",
+                    "type": "jsBtn",
+                    "url": false
+                },
+                {
+                    "class": "deleteProject",
+                    "id": "deleteProject_309",
+                    "name": "Delete",
+                    "type": "jsBtn",
+                    "url": false
+                }
+            ],
+            "client_name": "Johnny Client",
+            "color": "#EE508B",
+            "designer": "Demo designer, test4 Designer",
+            "enableStageEdit": "editProjectStage",
+            "enableStageEditId": "enableStageEdit_309_1345",
+            "id": 309,
+            "members": [
+                {
+                    "name": "Demo designer",
+                    "picture": "http://superdraft-dev.s3.us-west-2.amazonaws.com/user_folder/user7651/b11ccc87c911821af178090bb0ebfa84.png"
+                },
+                {
+                    "name": "test4 Designer",
+                    "picture": "https://development.archix.com/storage/user/77932c2c6056e219e26efd74accb7985/picture_72aebd83e272c0f811b4a92c830c6dc5_96164.png"
+                }
+            ],
+            "number": "SD20-2046",
+            "overDucHighLight": false,
+            "projectManager": " ",
+            "projectStageDue": "-",
+            "projectStageId": 1345,
+            "projectStageProgress": 20,
+            "projectStageStart": "17/08/2020",
+            "projectState": "Queensland",
+            "projectStatus": "Active",
+            "projectTeamMemberName": "Demo designer, test4 Designer",
+            "rgbColor": {
+                "b": 139,
+                "g": 80,
+                "r": 238
+            },
+            "textColor": "#EE508B",
+            "title": "194 Varsity Parade, Varsity Lakes, QLD 4227",
+            "url": "https://development.archix.com/projects/309"
+        },
+        {
+            "active_stage": "Preliminary Design Review Service",
+            "buttons": [
+                {
+                    "class": "editProject",
+                    "id": "editProject_308",
+                    "name": "Edit",
+                    "type": "jsBtn",
+                    "url": false
+                },
+                {
+                    "class": "deleteProject",
+                    "id": "deleteProject_308",
+                    "name": "Delete",
+                    "type": "jsBtn",
+                    "url": false
+                }
+            ],
+            "client_name": "Johnny Client",
+            "color": "#EE508B",
+            "designer": false,
+            "enableStageEdit": "editProjectStage",
+            "enableStageEditId": "enableStageEdit_308_1341",
+            "id": 308,
+            "members": false,
+            "number": "SD20-2045",
+            "overDucHighLight": false,
+            "projectManager": " ",
+            "projectStageDue": "-",
+            "projectStageId": 1341,
+            "projectStageProgress": 40,
+            "projectStageStart": "11/08/2020",
+            "projectState": "Queensland",
+            "projectStatus": "Active",
+            "projectTeamMemberName": false,
+            "rgbColor": {
+                "b": 139,
+                "g": 80,
+                "r": 238
+            },
+            "textColor": "#EE508B",
+            "title": "194 Varsity Parade, Varsity Lakes, QLD 4227",
+            "url": "https://development.archix.com/projects/308"
+        },
+        {
+            "active_stage": "Preliminary Building Cost Estimation",
+            "buttons": [
+                {
+                    "class": "editProject",
+                    "id": "editProject_307",
+                    "name": "Edit",
+                    "type": "jsBtn",
+                    "url": false
+                },
+                {
+                    "class": "deleteProject",
+                    "id": "deleteProject_307",
+                    "name": "Delete",
+                    "type": "jsBtn",
+                    "url": false
+                }
+            ],
+            "client_name": "Johnny Client",
+            "color": "#EE508B",
+            "designer": false,
+            "enableStageEdit": "editProjectStage",
+            "enableStageEditId": "enableStageEdit_307_1340",
+            "id": 307,
+            "members": false,
+            "number": "SD20-2044",
+            "overDucHighLight": false,
+            "projectManager": " ",
+            "projectStageDue": "-",
+            "projectStageId": 1340,
+            "projectStageProgress": 0,
+            "projectStageStart": "11/08/2020",
+            "projectState": "Queensland",
+            "projectStatus": "Active",
+            "projectTeamMemberName": false,
+            "rgbColor": {
+                "b": 139,
+                "g": 80,
+                "r": 238
+            },
+            "textColor": "#EE508B",
+            "title": "194 Varsity Parade, Varsity Lakes, QLD 4227",
+            "url": "https://development.archix.com/projects/307"
+        },
+        {
+            "active_stage": "Preliminary Design Review Service",
+            "buttons": [
+                {
+                    "class": "editProject",
+                    "id": "editProject_306",
+                    "name": "Edit",
+                    "type": "jsBtn",
+                    "url": false
+                },
+                {
+                    "class": "deleteProject",
+                    "id": "deleteProject_306",
+                    "name": "Delete",
+                    "type": "jsBtn",
+                    "url": false
+                }
+            ],
+            "client_name": "Johnny Client",
+            "color": "#EE508B",
+            "designer": false,
+            "enableStageEdit": "editProjectStage",
+            "enableStageEditId": "enableStageEdit_306_1337",
+            "id": 306,
+            "members": false,
+            "number": "SD20-2043",
+            "overDucHighLight": false,
+            "projectManager": " ",
+            "projectStageDue": "-",
+            "projectStageId": 1337,
+            "projectStageProgress": 0,
+            "projectStageStart": "11/08/2020",
+            "projectState": "Queensland",
+            "projectStatus": "Active",
+            "projectTeamMemberName": false,
+            "rgbColor": {
+                "b": 139,
+                "g": 80,
+                "r": 238
+            },
+            "textColor": "#EE508B",
+            "title": "194 Varsity Parade, Varsity Lakes, QLD 4227",
+            "url": "https://development.archix.com/projects/306"
+        },
+        {
+            "active_stage": "On-site Design Consultation",
+            "buttons": [
+                {
+                    "class": "editProject",
+                    "id": "editProject_305",
+                    "name": "Edit",
+                    "type": "jsBtn",
+                    "url": false
+                },
+                {
+                    "class": "deleteProject",
+                    "id": "deleteProject_305",
+                    "name": "Delete",
+                    "type": "jsBtn",
+                    "url": false
+                }
+            ],
+            "client_name": "Johnny Client",
+            "color": "#EE508B",
+            "designer": false,
+            "enableStageEdit": "editProjectStage",
+            "enableStageEditId": "enableStageEdit_305_1336",
+            "id": 305,
+            "members": false,
+            "number": "SD20-2042",
+            "overDucHighLight": false,
+            "projectManager": " ",
+            "projectStageDue": "-",
+            "projectStageId": 1336,
+            "projectStageProgress": 0,
+            "projectStageStart": "11/08/2020",
+            "projectState": "Queensland",
+            "projectStatus": "Active",
+            "projectTeamMemberName": false,
+            "rgbColor": {
+                "b": 139,
+                "g": 80,
+                "r": 238
+            },
+            "textColor": "#EE508B",
+            "title": "194 Varsity Parade, Varsity Lakes, QLD 4227",
+            "url": "https://development.archix.com/projects/305"
+        },
+        {
+            "active_stage": null,
+            "buttons": [
+                {
+                    "class": "editProject",
+                    "id": "editProject_304",
+                    "name": "Edit",
+                    "type": "jsBtn",
+                    "url": false
+                },
+                {
+                    "class": "deleteProject",
+                    "id": "deleteProject_304",
+                    "name": "Delete",
+                    "type": "jsBtn",
+                    "url": false
+                }
+            ],
+            "client_name": "Johnny Client",
+            "color": "#EE508B",
+            "designer": false,
+            "enableStageEdit": "editProjectStage",
+            "enableStageEditId": "enableStageEdit_304_",
+            "id": 304,
+            "members": false,
+            "number": "SD20-2041",
+            "overDucHighLight": false,
+            "projectManager": " ",
+            "projectStageDue": "-",
+            "projectStageId": null,
+            "projectStageProgress": null,
+            "projectStageStart": "11/08/2020",
+            "projectState": "Queensland",
+            "projectStatus": "Active",
+            "projectTeamMemberName": false,
+            "rgbColor": {
+                "b": 139,
+                "g": 80,
+                "r": 238
+            },
+            "textColor": "#EE508B",
+            "title": "194 Varsity Parade, Varsity Lakes, QLD 4227",
+            "url": "https://development.archix.com/projects/304"
+        },
+        {
+            "active_stage": null,
+            "buttons": [
+                {
+                    "class": "editProject",
+                    "id": "editProject_303",
+                    "name": "Edit",
+                    "type": "jsBtn",
+                    "url": false
+                },
+                {
+                    "class": "deleteProject",
+                    "id": "deleteProject_303",
+                    "name": "Delete",
+                    "type": "jsBtn",
+                    "url": false
+                }
+            ],
+            "client_name": "Johnny Client",
+            "color": "#EE508B",
+            "designer": false,
+            "enableStageEdit": "editProjectStage",
+            "enableStageEditId": "enableStageEdit_303_",
+            "id": 303,
+            "members": false,
+            "number": "SD20-2040",
+            "overDucHighLight": false,
+            "projectManager": " ",
+            "projectStageDue": "-",
+            "projectStageId": null,
+            "projectStageProgress": null,
+            "projectStageStart": "11/08/2020",
+            "projectState": "Queensland",
+            "projectStatus": "Active",
+            "projectTeamMemberName": false,
+            "rgbColor": {
+                "b": 139,
+                "g": 80,
+                "r": 238
+            },
+            "textColor": "#EE508B",
+            "title": "194 Varsity Parade, Varsity Lakes, QLD 4227",
+            "url": "https://development.archix.com/projects/303"
+        },
+        {
+            "active_stage": "Preliminary Design Service",
+            "buttons": [
+                {
+                    "class": "editProject",
+                    "id": "editProject_302",
+                    "name": "Edit",
+                    "type": "jsBtn",
+                    "url": false
+                },
+                {
+                    "class": "deleteProject",
+                    "id": "deleteProject_302",
+                    "name": "Delete",
+                    "type": "jsBtn",
+                    "url": false
+                }
+            ],
+            "client_name": "Johnny Client",
+            "color": "#EE508B",
+            "designer": false,
+            "enableStageEdit": "editProjectStage",
+            "enableStageEditId": "enableStageEdit_302_1324",
+            "id": 302,
+            "members": false,
+            "number": "SD20-2039",
+            "overDucHighLight": false,
+            "projectManager": " ",
+            "projectStageDue": "-",
+            "projectStageId": 1324,
+            "projectStageProgress": 0,
+            "projectStageStart": "03/08/2020",
+            "projectState": "Queensland",
+            "projectStatus": "Active",
+            "projectTeamMemberName": false,
+            "rgbColor": {
+                "b": 139,
+                "g": 80,
+                "r": 238
+            },
+            "textColor": "#EE508B",
+            "title": "194 Varsity Parade, Varsity Lakes, QLD 4227",
+            "url": "https://development.archix.com/projects/302"
+        },
+        {
+            "active_stage": null,
+            "buttons": [
+                {
+                    "class": "editProject",
+                    "id": "editProject_301",
+                    "name": "Edit",
+                    "type": "jsBtn",
+                    "url": false
+                },
+                {
+                    "class": "deleteProject",
+                    "id": "deleteProject_301",
+                    "name": "Delete",
+                    "type": "jsBtn",
+                    "url": false
+                }
+            ],
+            "client_name": "Johnny Client",
+            "color": "#EE508B",
+            "designer": false,
+            "enableStageEdit": "editProjectStage",
+            "enableStageEditId": "enableStageEdit_301_",
+            "id": 301,
+            "members": false,
+            "number": "SD20-2038",
+            "overDucHighLight": false,
+            "projectManager": " ",
+            "projectStageDue": "-",
+            "projectStageId": null,
+            "projectStageProgress": null,
+            "projectStageStart": "15/07/2020",
+            "projectState": "Queensland",
+            "projectStatus": "Active",
+            "projectTeamMemberName": false,
+            "rgbColor": {
+                "b": 139,
+                "g": 80,
+                "r": 238
+            },
+            "textColor": "#EE508B",
+            "title": "20 Becker Street, Sunnybank, QLD 4109",
+            "url": "https://development.archix.com/projects/301"
+        },
+        {
+            "active_stage": null,
+            "buttons": [
+                {
+                    "class": "editProject",
+                    "id": "editProject_298",
+                    "name": "Edit",
+                    "type": "jsBtn",
+                    "url": false
+                },
+                {
+                    "class": "deleteProject",
+                    "id": "deleteProject_298",
+                    "name": "Delete",
+                    "type": "jsBtn",
+                    "url": false
+                }
+            ],
+            "client_name": "Johnny Client",
+            "color": "#EE508B",
+            "designer": "Demo designer",
+            "enableStageEdit": "editProjectStage",
+            "enableStageEditId": "enableStageEdit_298_",
+            "id": 298,
+            "members": [
+                {
+                    "name": "Demo designer",
+                    "picture": "http://superdraft-dev.s3.us-west-2.amazonaws.com/user_folder/user7651/b11ccc87c911821af178090bb0ebfa84.png"
+                }
+            ],
+            "number": "SD20-2035",
+            "overDucHighLight": false,
+            "projectManager": " ",
+            "projectStageDue": "-",
+            "projectStageId": null,
+            "projectStageProgress": null,
+            "projectStageStart": "27/05/2020",
+            "projectState": "Queensland",
+            "projectStatus": "Active",
+            "projectTeamMemberName": "Demo designer",
+            "rgbColor": {
+                "b": 139,
+                "g": 80,
+                "r": 238
+            },
+            "textColor": "#EE508B",
+            "title": "20 Becker Street, Sunnybank, QLD 4109",
+            "url": "https://development.archix.com/projects/298"
+        },
+        {
+            "active_stage": "Preliminary Building Cost Estimation",
+            "buttons": [
+                {
+                    "class": "editProject",
+                    "id": "editProject_295",
+                    "name": "Edit",
+                    "type": "jsBtn",
+                    "url": false
+                },
+                {
+                    "class": "deleteProject",
+                    "id": "deleteProject_295",
+                    "name": "Delete",
+                    "type": "jsBtn",
+                    "url": false
+                }
+            ],
+            "client_name": "Johnny Client",
+            "color": "#EE508B",
+            "designer": "Demo designer",
+            "enableStageEdit": "editProjectStage",
+            "enableStageEditId": "enableStageEdit_295_1297",
+            "id": 295,
+            "members": [
+                {
+                    "name": "Demo designer",
+                    "picture": "http://superdraft-dev.s3.us-west-2.amazonaws.com/user_folder/user7651/b11ccc87c911821af178090bb0ebfa84.png"
+                }
+            ],
+            "number": "SD20-2032",
+            "overDucHighLight": "error",
+            "projectManager": " ",
+            "projectStageDue": "11/06/2020",
+            "projectStageId": 1297,
+            "projectStageProgress": 15,
+            "projectStageStart": "08/05/2020",
+            "projectState": "Queensland",
+            "projectStatus": "Active",
+            "projectTeamMemberName": "Demo designer",
+            "rgbColor": {
+                "b": 139,
+                "g": 80,
+                "r": 238
+            },
+            "textColor": "#EE508B",
+            "title": "194 Varsity Parade, Varsity Lakes, QLD 4227",
+            "url": "https://development.archix.com/projects/295"
+        },
+        {
+            "active_stage": "Development Approval Drawings Stage",
+            "buttons": [
+                {
+                    "class": "editProject",
+                    "id": "editProject_294",
+                    "name": "Edit",
+                    "type": "jsBtn",
+                    "url": false
+                },
+                {
+                    "class": "deleteProject",
+                    "id": "deleteProject_294",
+                    "name": "Delete",
+                    "type": "jsBtn",
+                    "url": false
+                }
+            ],
+            "client_name": "Johnny Client",
+            "color": "#EE508B",
+            "designer": "Demo designer",
+            "enableStageEdit": "editProjectStage",
+            "enableStageEditId": "enableStageEdit_294_1293",
+            "id": 294,
+            "members": [
+                {
+                    "name": "Demo designer",
+                    "picture": "http://superdraft-dev.s3.us-west-2.amazonaws.com/user_folder/user7651/b11ccc87c911821af178090bb0ebfa84.png"
+                }
+            ],
+            "number": "SD20-2031",
+            "overDucHighLight": "error",
+            "projectManager": " ",
+            "projectStageDue": "10/06/2020",
+            "projectStageId": 1293,
+            "projectStageProgress": 0,
+            "projectStageStart": "07/05/2020",
+            "projectState": "Queensland",
+            "projectStatus": "Active",
+            "projectTeamMemberName": "Demo designer",
+            "rgbColor": {
+                "b": 139,
+                "g": 80,
+                "r": 238
+            },
+            "textColor": "#EE508B",
+            "title": "20 Becker Street, Sunnybank, QLD 4109",
+            "url": "https://development.archix.com/projects/294"
+        },
+        {
+            "active_stage": "Building Approval Drawings Stage",
+            "buttons": [
+                {
+                    "class": "editProject",
+                    "id": "editProject_293",
+                    "name": "Edit",
+                    "type": "jsBtn",
+                    "url": false
+                },
+                {
+                    "class": "deleteProject",
+                    "id": "deleteProject_293",
+                    "name": "Delete",
+                    "type": "jsBtn",
+                    "url": false
+                }
+            ],
+            "client_name": "Johnny Client",
+            "color": "#EE508B",
+            "designer": "test4 Designer, test7 Designer",
+            "enableStageEdit": "editProjectStage",
+            "enableStageEditId": "enableStageEdit_293_1291",
+            "id": 293,
+            "members": [
+                {
+                    "name": "test4 Designer",
+                    "picture": "https://development.archix.com/storage/user/77932c2c6056e219e26efd74accb7985/picture_72aebd83e272c0f811b4a92c830c6dc5_96164.png"
+                },
+                {
+                    "name": "test7 Designer",
+                    "picture": "https://development.archix.com/storage/user/841b60e20ff680b0d59aa9d6902fe289/picture_72aebd83e272c0f811b4a92c830c6dc5_96164.png"
+                }
+            ],
+            "number": "SD20-2030",
+            "overDucHighLight": false,
+            "projectManager": " ",
+            "projectStageDue": "-",
+            "projectStageId": 1291,
+            "projectStageProgress": 0,
+            "projectStageStart": "28/04/2020",
+            "projectState": "Queensland",
+            "projectStatus": "Active",
+            "projectTeamMemberName": "test4 Designer, test7 Designer",
+            "rgbColor": {
+                "b": 139,
+                "g": 80,
+                "r": 238
+            },
+            "textColor": "#EE508B",
+            "title": "194 Varsity Parade, Varsity Lakes, QLD 4227",
+            "url": "https://development.archix.com/projects/293"
+        },
+        {
+            "active_stage": "Preliminary Design Service",
+            "buttons": [
+                {
+                    "class": "editProject",
+                    "id": "editProject_291",
+                    "name": "Edit",
+                    "type": "jsBtn",
+                    "url": false
+                },
+                {
+                    "class": "deleteProject",
+                    "id": "deleteProject_291",
+                    "name": "Delete",
+                    "type": "jsBtn",
+                    "url": false
+                }
+            ],
+            "client_name": "Johnny Client",
+            "color": "#EE508B",
+            "designer": "test3 Designer, Demo designer",
+            "enableStageEdit": "editProjectStage",
+            "enableStageEditId": "enableStageEdit_291_1282",
+            "id": 291,
+            "members": [
+                {
+                    "name": "test3 Designer",
+                    "picture": "https://development.archix.com/storage/user/77ae1a5da3b68dc65a9d1648242a29a7/picture_72aebd83e272c0f811b4a92c830c6dc5_96164.png"
+                },
+                {
+                    "name": "Demo designer",
+                    "picture": "http://superdraft-dev.s3.us-west-2.amazonaws.com/user_folder/user7651/b11ccc87c911821af178090bb0ebfa84.png"
+                }
+            ],
+            "number": "SD20-2028",
+            "overDucHighLight": false,
+            "projectManager": " ",
+            "projectStageDue": "-",
+            "projectStageId": 1282,
+            "projectStageProgress": 0,
+            "projectStageStart": "27/04/2020",
+            "projectState": "Queensland",
+            "projectStatus": "Active",
+            "projectTeamMemberName": "test3 Designer, Demo designer",
+            "rgbColor": {
+                "b": 139,
+                "g": 80,
+                "r": 238
+            },
+            "textColor": "#EE508B",
+            "title": "194 Varsity Parade, Varsity Lakes, QLD 4227",
+            "url": "https://development.archix.com/projects/291"
+        },
+        {
+            "active_stage": "Preliminary Design Review Service",
+            "buttons": [
+                {
+                    "class": "editProject",
+                    "id": "editProject_286",
+                    "name": "Edit",
+                    "type": "jsBtn",
+                    "url": false
+                },
+                {
+                    "class": "deleteProject",
+                    "id": "deleteProject_286",
+                    "name": "Delete",
+                    "type": "jsBtn",
+                    "url": false
+                }
+            ],
+            "client_name": "Johnny Client",
+            "color": "#EE508B",
+            "designer": false,
+            "enableStageEdit": "editProjectStage",
+            "enableStageEditId": "enableStageEdit_286_1270",
+            "id": 286,
+            "members": false,
+            "number": "SD20-2023",
+            "overDucHighLight": false,
+            "projectManager": " ",
+            "projectStageDue": "-",
+            "projectStageId": 1270,
+            "projectStageProgress": 0,
+            "projectStageStart": "27/04/2020",
+            "projectState": "Queensland",
+            "projectStatus": "Active",
+            "projectTeamMemberName": false,
+            "rgbColor": {
+                "b": 139,
+                "g": 80,
+                "r": 238
+            },
+            "textColor": "#EE508B",
+            "title": "194 Varsity Parade, Varsity Lakes, QLD 4227",
+            "url": "https://development.archix.com/projects/286"
+        },
+        {
+            "active_stage": "Preliminary Design Review Service",
+            "buttons": [
+                {
+                    "class": "editProject",
+                    "id": "editProject_285",
+                    "name": "Edit",
+                    "type": "jsBtn",
+                    "url": false
+                },
+                {
+                    "class": "deleteProject",
+                    "id": "deleteProject_285",
+                    "name": "Delete",
+                    "type": "jsBtn",
+                    "url": false
+                }
+            ],
+            "client_name": "Johnny Client",
+            "color": "#EE508B",
+            "designer": "test8 Designer",
+            "enableStageEdit": "editProjectStage",
+            "enableStageEditId": "enableStageEdit_285_1268",
+            "id": 285,
+            "members": [
+                {
+                    "name": "test8 Designer",
+                    "picture": "https://development.archix.com/storage/user/d85b63ef0ccb114d0a3bb7b7d808028f/picture_72aebd83e272c0f811b4a92c830c6dc5_96164.png"
+                }
+            ],
+            "number": "SD20-2022",
+            "overDucHighLight": false,
+            "projectManager": " ",
+            "projectStageDue": "-",
+            "projectStageId": 1268,
+            "projectStageProgress": 100,
+            "projectStageStart": "27/04/2020",
+            "projectState": "Queensland",
+            "projectStatus": "Active",
+            "projectTeamMemberName": "test8 Designer",
+            "rgbColor": {
+                "b": 139,
+                "g": 80,
+                "r": 238
+            },
+            "textColor": "#EE508B",
+            "title": "194 Varsity Parade, Varsity Lakes, QLD 4227",
+            "url": "https://development.archix.com/projects/285"
+        },
+        {
+            "active_stage": "Preliminary Design Review Service",
+            "buttons": [
+                {
+                    "class": "editProject",
+                    "id": "editProject_272",
+                    "name": "Edit",
+                    "type": "jsBtn",
+                    "url": false
+                },
+                {
+                    "class": "deleteProject",
+                    "id": "deleteProject_272",
+                    "name": "Delete",
+                    "type": "jsBtn",
+                    "url": false
+                }
+            ],
+            "client_name": "Johnny Client",
+            "color": "#EE508B",
+            "designer": "test5 Designer",
+            "enableStageEdit": "editProjectStage",
+            "enableStageEditId": "enableStageEdit_272_1230",
+            "id": 272,
+            "members": [
+                {
+                    "name": "test5 Designer",
+                    "picture": "https://development.archix.com/storage/user/9375084629cd055e6b819053bc9714de/picture_72aebd83e272c0f811b4a92c830c6dc5_96164.png"
+                }
+            ],
+            "number": "SD20-2009",
+            "overDucHighLight": "error",
+            "projectManager": " ",
+            "projectStageDue": "25/06/2020",
+            "projectStageId": 1230,
+            "projectStageProgress": 15,
+            "projectStageStart": "02/04/2020",
+            "projectState": "Queensland",
+            "projectStatus": "Active",
+            "projectTeamMemberName": "test5 Designer",
+            "rgbColor": {
+                "b": 139,
+                "g": 80,
+                "r": 238
+            },
+            "textColor": "#EE508B",
+            "title": "16 Sunderland St, Macgregor, QLD 4109",
+            "url": "https://development.archix.com/projects/272"
+        },
+        {
+            "active_stage": "Detailed Site Analysis",
+            "buttons": [
+                {
+                    "class": "editProject",
+                    "id": "editProject_270",
+                    "name": "Edit",
+                    "type": "jsBtn",
+                    "url": false
+                },
+                {
+                    "class": "deleteProject",
+                    "id": "deleteProject_270",
+                    "name": "Delete",
+                    "type": "jsBtn",
+                    "url": false
+                }
+            ],
+            "client_name": "Johnny Client",
+            "color": "#EE508B",
+            "designer": false,
+            "enableStageEdit": "editProjectStage",
+            "enableStageEditId": "enableStageEdit_270_1219",
+            "id": 270,
+            "members": false,
+            "number": "SD20-2007",
+            "overDucHighLight": false,
+            "projectManager": " ",
+            "projectStageDue": "-",
+            "projectStageId": 1219,
+            "projectStageProgress": 0,
+            "projectStageStart": "28/02/2020",
+            "projectState": "Queensland",
+            "projectStatus": "Active",
+            "projectTeamMemberName": false,
+            "rgbColor": {
+                "b": 139,
+                "g": 80,
+                "r": 238
+            },
+            "textColor": "#EE508B",
+            "title": "20 Becker Street, Sunnybank, QLD 4109",
+            "url": "https://development.archix.com/projects/270"
+        },
+        {
+            "active_stage": "Sketch Design Service",
+            "buttons": [
+                {
+                    "class": "editProject",
+                    "id": "editProject_268",
+                    "name": "Edit",
+                    "type": "jsBtn",
+                    "url": false
+                },
+                {
+                    "class": "deleteProject",
+                    "id": "deleteProject_268",
+                    "name": "Delete",
+                    "type": "jsBtn",
+                    "url": false
+                }
+            ],
+            "client_name": "Johnny Client",
+            "color": "#EE508B",
+            "designer": false,
+            "enableStageEdit": "editProjectStage",
+            "enableStageEditId": "enableStageEdit_268_1213",
+            "id": 268,
+            "members": false,
+            "number": "SD20-2005",
+            "overDucHighLight": false,
+            "projectManager": " ",
+            "projectStageDue": "-",
+            "projectStageId": 1213,
+            "projectStageProgress": 0,
+            "projectStageStart": "27/02/2020",
+            "projectState": "Queensland",
+            "projectStatus": "Active",
+            "projectTeamMemberName": false,
+            "rgbColor": {
+                "b": 139,
+                "g": 80,
+                "r": 238
+            },
+            "textColor": "#EE508B",
+            "title": "20 Becker Street, test street 2, Sunnybank, QLD 4109",
+            "url": "https://development.archix.com/projects/268"
+        },
+        {
+            "active_stage": "Energy Efficiency Report",
+            "buttons": [
+                {
+                    "class": "editProject",
+                    "id": "editProject_267",
+                    "name": "Edit",
+                    "type": "jsBtn",
+                    "url": false
+                },
+                {
+                    "class": "deleteProject",
+                    "id": "deleteProject_267",
+                    "name": "Delete",
+                    "type": "jsBtn",
+                    "url": false
+                }
+            ],
+            "client_name": "Johnny Client",
+            "color": "#007bff",
+            "designer": false,
+            "enableStageEdit": "editProjectStage",
+            "enableStageEditId": "enableStageEdit_267_1211",
+            "id": 267,
+            "members": false,
+            "number": "SD20-2004",
+            "overDucHighLight": false,
+            "projectManager": " ",
+            "projectStageDue": "-",
+            "projectStageId": 1211,
+            "projectStageProgress": 60,
+            "projectStageStart": "04/02/2020",
+            "projectState": "Queensland",
+            "projectStatus": "In Council",
+            "projectTeamMemberName": false,
+            "rgbColor": {
+                "b": 255,
+                "g": 123,
+                "r": 0
+            },
+            "textColor": "#007bff",
+            "title": "20 Becker Street, Sunnybank, QLD 4109",
+            "url": "https://development.archix.com/projects/267"
+        },
+        {
+            "active_stage": "Energy Efficiency Report",
+            "buttons": [
+                {
+                    "class": "editProject",
+                    "id": "editProject_263",
+                    "name": "Edit",
+                    "type": "jsBtn",
+                    "url": false
+                },
+                {
+                    "class": "deleteProject",
+                    "id": "deleteProject_263",
+                    "name": "Delete",
+                    "type": "jsBtn",
+                    "url": false
+                }
+            ],
+            "client_name": "Johnny Client",
+            "color": "#EE508B",
+            "designer": "Demo designer",
+            "enableStageEdit": "editProjectStage",
+            "enableStageEditId": "enableStageEdit_263_1199",
+            "id": 263,
+            "members": [
+                {
+                    "name": "Demo designer",
+                    "picture": "http://superdraft-dev.s3.us-west-2.amazonaws.com/user_folder/user7651/b11ccc87c911821af178090bb0ebfa84.png"
+                }
+            ],
+            "number": "SD20-0008",
+            "overDucHighLight": false,
+            "projectManager": " ",
+            "projectStageDue": "-",
+            "projectStageId": 1199,
+            "projectStageProgress": 0,
+            "projectStageStart": "30/01/2020",
+            "projectState": "Queensland",
+            "projectStatus": "Active",
+            "projectTeamMemberName": "Demo designer",
+            "rgbColor": {
+                "b": 139,
+                "g": 80,
+                "r": 238
+            },
+            "textColor": "#EE508B",
+            "title": "20 Becker Street, Sunnybank, QLD 4109",
+            "url": "https://development.archix.com/projects/263"
+        },
+        {
+            "active_stage": "Energy Efficiency Report",
+            "buttons": [
+                {
+                    "class": "editProject",
+                    "id": "editProject_261",
+                    "name": "Edit",
+                    "type": "jsBtn",
+                    "url": false
+                },
+                {
+                    "class": "deleteProject",
+                    "id": "deleteProject_261",
+                    "name": "Delete",
+                    "type": "jsBtn",
+                    "url": false
+                }
+            ],
+            "client_name": "Johnny Client",
+            "color": "#EE508B",
+            "designer": false,
+            "enableStageEdit": "editProjectStage",
+            "enableStageEditId": "enableStageEdit_261_1187",
+            "id": 261,
+            "members": false,
+            "number": "SD20-0006",
+            "overDucHighLight": false,
+            "projectManager": " ",
+            "projectStageDue": "-",
+            "projectStageId": 1187,
+            "projectStageProgress": 0,
+            "projectStageStart": "28/01/2020",
+            "projectState": "Queensland",
+            "projectStatus": "Active",
+            "projectTeamMemberName": false,
+            "rgbColor": {
+                "b": 139,
+                "g": 80,
+                "r": 238
+            },
+            "textColor": "#EE508B",
+            "title": "20 Becker Street, Sunnybank, QLD 4109",
+            "url": "https://development.archix.com/projects/261"
+        },
+        {
+            "active_stage": "Energy Efficiency Report",
+            "buttons": [
+                {
+                    "class": "editProject",
+                    "id": "editProject_259",
+                    "name": "Edit",
+                    "type": "jsBtn",
+                    "url": false
+                },
+                {
+                    "class": "deleteProject",
+                    "id": "deleteProject_259",
+                    "name": "Delete",
+                    "type": "jsBtn",
+                    "url": false
+                }
+            ],
+            "client_name": "Johnny Client",
+            "color": "#FFC107",
+            "designer": false,
+            "enableStageEdit": "editProjectStage",
+            "enableStageEditId": "enableStageEdit_259_1174",
+            "id": 259,
+            "members": false,
+            "number": "SD20-0004",
+            "overDucHighLight": false,
+            "projectManager": " ",
+            "projectStageDue": "-",
+            "projectStageId": 1174,
+            "projectStageProgress": 0,
+            "projectStageStart": "28/01/2020",
+            "projectState": "Queensland",
+            "projectStatus": "On Hold",
+            "projectTeamMemberName": false,
+            "rgbColor": {
+                "b": 7,
+                "g": 193,
+                "r": 255
+            },
+            "textColor": "#FFC107",
+            "title": "20 Becker Street, Sunnybank, QLD 4109",
+            "url": "https://development.archix.com/projects/259"
+        },
+        {
+            "active_stage": "Energy Efficiency Report",
+            "buttons": [
+                {
+                    "class": "editProject",
+                    "id": "editProject_258",
+                    "name": "Edit",
+                    "type": "jsBtn",
+                    "url": false
+                },
+                {
+                    "class": "deleteProject",
+                    "id": "deleteProject_258",
+                    "name": "Delete",
+                    "type": "jsBtn",
+                    "url": false
+                }
+            ],
+            "client_name": "Johnny Client",
+            "color": "#EE508B",
+            "designer": false,
+            "enableStageEdit": "editProjectStage",
+            "enableStageEditId": "enableStageEdit_258_1167",
+            "id": 258,
+            "members": false,
+            "number": "SD20-0003",
+            "overDucHighLight": false,
+            "projectManager": " ",
+            "projectStageDue": "-",
+            "projectStageId": 1167,
+            "projectStageProgress": 0,
+            "projectStageStart": "28/01/2020",
+            "projectState": "Queensland",
+            "projectStatus": "Active",
+            "projectTeamMemberName": false,
+            "rgbColor": {
+                "b": 139,
+                "g": 80,
+                "r": 238
+            },
+            "textColor": "#EE508B",
+            "title": "20 Becker Street, Sunnybank, QLD 4109",
+            "url": "https://development.archix.com/projects/258"
+        },
+        {
+            "active_stage": "Energy Efficiency Report",
+            "buttons": [
+                {
+                    "class": "editProject",
+                    "id": "editProject_257",
+                    "name": "Edit",
+                    "type": "jsBtn",
+                    "url": false
+                },
+                {
+                    "class": "deleteProject",
+                    "id": "deleteProject_257",
+                    "name": "Delete",
+                    "type": "jsBtn",
+                    "url": false
+                }
+            ],
+            "client_name": "Johnny Client",
+            "color": "#EE508B",
+            "designer": false,
+            "enableStageEdit": "editProjectStage",
+            "enableStageEditId": "enableStageEdit_257_1165",
+            "id": 257,
+            "members": false,
+            "number": "SD20-0002",
+            "overDucHighLight": false,
+            "projectManager": " ",
+            "projectStageDue": "-",
+            "projectStageId": 1165,
+            "projectStageProgress": 0,
+            "projectStageStart": "28/01/2020",
+            "projectState": "Queensland",
+            "projectStatus": "Active",
+            "projectTeamMemberName": false,
+            "rgbColor": {
+                "b": 139,
+                "g": 80,
+                "r": 238
+            },
+            "textColor": "#EE508B",
+            "title": "20 Becker Street, Sunnybank, QLD 4109",
+            "url": "https://development.archix.com/projects/257"
+        },
+        {
+            "active_stage": "Energy Efficiency Report",
+            "buttons": [
+                {
+                    "class": "editProject",
+                    "id": "editProject_255",
+                    "name": "Edit",
+                    "type": "jsBtn",
+                    "url": false
+                },
+                {
+                    "class": "deleteProject",
+                    "id": "deleteProject_255",
+                    "name": "Delete",
+                    "type": "jsBtn",
+                    "url": false
+                }
+            ],
+            "client_name": "Johnny Client",
+            "color": "#EE508B",
+            "designer": false,
+            "enableStageEdit": "editProjectStage",
+            "enableStageEditId": "enableStageEdit_255_1163",
+            "id": 255,
+            "members": false,
+            "number": "SD19-0119",
+            "overDucHighLight": false,
+            "projectManager": " ",
+            "projectStageDue": "-",
+            "projectStageId": 1163,
+            "projectStageProgress": 0,
+            "projectStageStart": "28/01/2020",
+            "projectState": "Queensland",
+            "projectStatus": "Active",
+            "projectTeamMemberName": false,
+            "rgbColor": {
+                "b": 139,
+                "g": 80,
+                "r": 238
+            },
+            "textColor": "#EE508B",
+            "title": "20 Becker Street, Sunnybank, QLD 4109",
+            "url": "https://development.archix.com/projects/255"
+        },
+        {
+            "active_stage": "Detailed Site Analysis",
+            "buttons": [
+                {
+                    "class": "editProject",
+                    "id": "editProject_254",
+                    "name": "Edit",
+                    "type": "jsBtn",
+                    "url": false
+                },
+                {
+                    "class": "deleteProject",
+                    "id": "deleteProject_254",
+                    "name": "Delete",
+                    "type": "jsBtn",
+                    "url": false
+                }
+            ],
+            "client_name": "Johnny Client",
+            "color": "#EE508B",
+            "designer": false,
+            "enableStageEdit": "editProjectStage",
+            "enableStageEditId": "enableStageEdit_254_1146",
+            "id": 254,
+            "members": false,
+            "number": "SD19-0118",
+            "overDucHighLight": false,
+            "projectManager": " ",
+            "projectStageDue": "-",
+            "projectStageId": 1146,
+            "projectStageProgress": 100,
+            "projectStageStart": "28/01/2020",
+            "projectState": "Queensland",
+            "projectStatus": "Active",
+            "projectTeamMemberName": false,
+            "rgbColor": {
+                "b": 139,
+                "g": 80,
+                "r": 238
+            },
+            "textColor": "#EE508B",
+            "title": "20 Becker Street, Sunnybank, QLD 4109",
+            "url": "https://development.archix.com/projects/254"
+        },
+        {
+            "active_stage": "Energy Efficiency Report",
+            "buttons": [
+                {
+                    "class": "editProject",
+                    "id": "editProject_253",
+                    "name": "Edit",
+                    "type": "jsBtn",
+                    "url": false
+                },
+                {
+                    "class": "deleteProject",
+                    "id": "deleteProject_253",
+                    "name": "Delete",
+                    "type": "jsBtn",
+                    "url": false
+                }
+            ],
+            "client_name": "Johnny Client",
+            "color": "#EE508B",
+            "designer": false,
+            "enableStageEdit": "editProjectStage",
+            "enableStageEditId": "enableStageEdit_253_1144",
+            "id": 253,
+            "members": false,
+            "number": "SD19-0117",
+            "overDucHighLight": false,
+            "projectManager": " ",
+            "projectStageDue": "-",
+            "projectStageId": 1144,
+            "projectStageProgress": 100,
+            "projectStageStart": "28/01/2020",
+            "projectState": "Queensland",
+            "projectStatus": "Active",
+            "projectTeamMemberName": false,
+            "rgbColor": {
+                "b": 139,
+                "g": 80,
+                "r": 238
+            },
+            "textColor": "#EE508B",
+            "title": "20 Becker Street, Sunnybank, QLD 4109",
+            "url": "https://development.archix.com/projects/253"
+        }
+    ],
+    "result": 1,
+    "showingEnd": 30,
+    "showingStart": 1,
+    "sql": "SELECT count(DISTINCT P.id) AS total_project FROM project AS P LEFT JOIN project_clients AS PC ON PC.project_id = P.id  LEFT JOIN location_states AS LS ON LS.id = P.project_state_id LEFT JOIN users AS PM ON PM.id = P.user_id LEFT JOIN (SELECT DISTINCT(U.id), PC.project_id, U.name_first, U.name_last, U.email FROM project_clients AS PC INNER JOIN users AS U ON U.id = PC.client_id) AS PU ON PU.project_id = P.id  LEFT JOIN (SELECT DISTINCT(U.id), PT.project_id, U.name_first, U.name_last FROM project_team AS PT INNER JOIN users AS U ON U.id = PT.team_id INNER JOIN user_job_titles AS UJT ON UJT.user_id = U.id WHERE UJT.job_title_id = 61 AND U.status = '1' AND deleted_at IS NULL) AS clientSupportAssistant ON clientSupportAssistant.project_id = P.id LEFT JOIN (SELECT * FROM project_stages WHERE (progress < 100 OR progress IS NULL) AND deleted_at IS NULL AND disabled = '0'  AND title NOT LIKE 'Consultant Stage:%' ORDER BY progress DESC, `order`) AS APS_1 ON APS_1.project_id = P.id  LEFT JOIN (SELECT * FROM project_stages WHERE deleted_at IS NULL AND title NOT LIKE 'Consultant Stage:%' AND disabled = '0' ORDER BY `order` DESC) AS APS_2 ON APS_2.project_id = P.id  WHERE P.status IN('0','2','4','5','6') AND  P.deleted_at IS null ",
+    "stageColumnName": "Active Stage",
+    "test": "SELECT P.*, PC.client_id, LS.name AS state_name, PU.name_first, PU.name_last, PU.email as client_email, PM.name_first AS PM_firstname, PM.name_last AS PM_lastname, clientSupportAssistant.name_first AS clientSupportAssistant_firstName, clientSupportAssistant.name_last AS clientSupportAssistant_lastName,IFNULL(APS_1.end_date, APS_2.end_date) AS stage_end_date,CASE WHEN APS_1.title IS NULL THEN APS_2.title ELSE APS_1.title END AS stage_title,CASE WHEN APS_1.title IS NULL THEN APS_2.progress ELSE APS_1.progress END AS stage_progress,CASE WHEN APS_1.title IS NULL THEN APS_2.id ELSE APS_1.id END AS stage_id FROM project AS P LEFT JOIN project_clients AS PC ON PC.project_id = P.id  LEFT JOIN location_states AS LS ON LS.id = P.project_state_id LEFT JOIN users AS PM ON PM.id = P.user_id LEFT JOIN (SELECT DISTINCT(U.id), PC.project_id, U.name_first, U.name_last, U.email FROM project_clients AS PC INNER JOIN users AS U ON U.id = PC.client_id) AS PU ON PU.project_id = P.id  LEFT JOIN (SELECT DISTINCT(U.id), PT.project_id, U.name_first, U.name_last FROM project_team AS PT INNER JOIN users AS U ON U.id = PT.team_id INNER JOIN user_job_titles AS UJT ON UJT.user_id = U.id WHERE UJT.job_title_id = 61 AND U.status = '1' AND deleted_at IS NULL) AS clientSupportAssistant ON clientSupportAssistant.project_id = P.id LEFT JOIN (SELECT * FROM project_stages WHERE (progress < 100 OR progress IS NULL) AND deleted_at IS NULL AND disabled = '0'  AND title NOT LIKE 'Consultant Stage:%' ORDER BY progress DESC, `order`) AS APS_1 ON APS_1.project_id = P.id  LEFT JOIN (SELECT * FROM project_stages WHERE deleted_at IS NULL AND title NOT LIKE 'Consultant Stage:%' AND disabled = '0' ORDER BY `order` DESC) AS APS_2 ON APS_2.project_id = P.id  WHERE P.status IN('0','2','4','5','6') AND  P.deleted_at IS null  GROUP BY P.ID ORDER BY P.ID DESC LIMIT 0, 30",
+    "total": 162
+}

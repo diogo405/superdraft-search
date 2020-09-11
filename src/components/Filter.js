@@ -16,7 +16,8 @@ class Filter extends React.Component {
 					project_number: '',
 					address: '',
 					state: '',
-					team_id: '',
+					partner: '',
+					staff: '',
 					status: '',
 					eta_status: '',
 					communication: '',
@@ -57,11 +58,11 @@ class Filter extends React.Component {
 							</div>
 							<div className="filter__field">
 								<label className="filter__label">Partner</label>
-								<Field className="filter__input" name="team_id[]" placeholder="e.g. ABC Design"/>
+								<Field className="filter__input" name="partner" placeholder="e.g. ABC Design"/>
 							</div>
 							<div className="filter__field">
 								<label className="filter__label">Staff</label>
-								<Field className="filter__input" name="team_id[]" placeholder="e.g. John Smith"/>
+								<Field className="filter__input" name="staff" placeholder="e.g. John Smith"/>
 							</div>
 						</div>
 						<div className="filter__row">

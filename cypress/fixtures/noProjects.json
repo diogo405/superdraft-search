@@ -1,0 +1,242 @@
+{
+    "appendPageClass": "table_view",
+    "dashboardBtn": true,
+    "enableClientColumn": true,
+    "enableCookie": true,
+    "filterMenuItems": false,
+    "form": {
+        "buttons": [
+            {
+                "class": "s_btn",
+                "id": "submit_project_search_form",
+                "text": "Search"
+            },
+            {
+                "class": "s_btn gray",
+                "id": "rest_project_search_form",
+                "text": "Clear"
+            },
+            {
+                "class": "s_btn red",
+                "id": "exportCSV",
+                "text": "Export To CSV"
+            }
+        ],
+        "class": "project_seach_form",
+        "id": "project_seach_form",
+        "inputs": [
+            {
+                "class": false,
+                "id": false,
+                "label": false,
+                "name": "client_full_name",
+                "placeholder": "Client Name",
+                "type": "text"
+            },
+            {
+                "class": false,
+                "id": false,
+                "label": false,
+                "name": "project_number",
+                "placeholder": "Project Number",
+                "type": "text"
+            },
+            {
+                "class": false,
+                "id": false,
+                "label": false,
+                "name": "address",
+                "placeholder": "Street, Address Line 2 Or Suburb",
+                "type": "text"
+            },
+            {
+                "class": false,
+                "id": false,
+                "label": "State",
+                "name": "state",
+                "options": [
+                    {
+                        "name": "Australian Capital Territory",
+                        "value": 3
+                    },
+                    {
+                        "name": "New South Wales",
+                        "value": 2
+                    },
+                    {
+                        "name": "Northern Territory",
+                        "value": 7
+                    },
+                    {
+                        "name": "Other",
+                        "value": 9
+                    },
+                    {
+                        "name": "Queensland",
+                        "value": 1
+                    },
+                    {
+                        "name": "South Australia",
+                        "value": 6
+                    },
+                    {
+                        "name": "Tasmania",
+                        "value": 5
+                    },
+                    {
+                        "name": "Victoria",
+                        "value": 4
+                    },
+                    {
+                        "name": "Western Australia",
+                        "value": 8
+                    }
+                ],
+                "placeholder": "Please Select State...",
+                "type": "multi_select"
+            },
+            {
+                "class": "search_team",
+                "id": "search_partner",
+                "label": false,
+                "name": "team_id[]",
+                "placeholder": "Search Partner",
+                "type": "search_team"
+            },
+            {
+                "class": "search_team",
+                "id": "search_admin",
+                "label": false,
+                "name": "team_id[]",
+                "placeholder": "Search Staff",
+                "type": "search_team"
+            },
+            {
+                "class": false,
+                "id": false,
+                "label": "Status",
+                "name": "status",
+                "options": [
+                    {
+                        "name": "All Active Status",
+                        "value": "active"
+                    },
+                    {
+                        "name": "Archived",
+                        "value": "archived"
+                    },
+                    {
+                        "name": "OSDC",
+                        "value": 5
+                    },
+                    {
+                        "name": "Active",
+                        "value": 0
+                    },
+                    {
+                        "name": "In Council",
+                        "value": 4
+                    },
+                    {
+                        "name": "Build Tender",
+                        "value": 6
+                    },
+                    {
+                        "name": "Completed",
+                        "value": 1
+                    },
+                    {
+                        "name": "On Hold",
+                        "value": 2
+                    },
+                    {
+                        "name": "Cancelled",
+                        "value": 3
+                    },
+                    {
+                        "name": "All",
+                        "value": "all"
+                    }
+                ],
+                "type": "select"
+            },
+            {
+                "class": false,
+                "id": false,
+                "label": "ETA Report",
+                "name": "eta_status",
+                "options": [
+                    {
+                        "name": "Search By ETA",
+                        "value": ""
+                    },
+                    {
+                        "name": "ETA On Track",
+                        "value": "on_track"
+                    },
+                    {
+                        "name": "ETA Approaching",
+                        "value": "eta_overdue_soon"
+                    },
+                    {
+                        "name": "ETA Overdue",
+                        "value": "eta_fall"
+                    },
+                    {
+                        "name": "ETA Not Set",
+                        "value": "eta_not_set"
+                    }
+                ],
+                "type": "select"
+            },
+            {
+                "class": false,
+                "id": false,
+                "label": "Communication",
+                "name": "communication",
+                "options": [
+                    {
+                        "name": "Search by Communication Status",
+                        "value": ""
+                    },
+                    {
+                        "name": "No Communication",
+                        "value": "search_none_communication"
+                    },
+                    {
+                        "name": "Poor Communication",
+                        "value": "search_poor_communication"
+                    },
+                    {
+                        "name": "Average Communication",
+                        "value": "search_average_communication"
+                    },
+                    {
+                        "name": "Frequent Communication",
+                        "value": "search_frequent_communication"
+                    }
+                ],
+                "type": "select"
+            },
+            {
+                "class": "col-12",
+                "id": false,
+                "label": false,
+                "name": "stage_title",
+                "placeholder": "Search Stage Title",
+                "type": "text"
+            }
+        ],
+        "title": "Search"
+    },
+    "itemPerPage": "0",
+    "message": "",
+    "page": 1,
+    "result": 1,
+    "showingEnd": 30,
+    "showingStart": 1,
+    "sql": "SELECT count(DISTINCT P.id) AS total_project FROM project AS P LEFT JOIN project_clients AS PC ON PC.project_id = P.id  LEFT JOIN location_states AS LS ON LS.id = P.project_state_id LEFT JOIN users AS PM ON PM.id = P.user_id LEFT JOIN (SELECT DISTINCT(U.id), PC.project_id, U.name_first, U.name_last, U.email FROM project_clients AS PC INNER JOIN users AS U ON U.id = PC.client_id) AS PU ON PU.project_id = P.id  LEFT JOIN (SELECT DISTINCT(U.id), PT.project_id, U.name_first, U.name_last FROM project_team AS PT INNER JOIN users AS U ON U.id = PT.team_id INNER JOIN user_job_titles AS UJT ON UJT.user_id = U.id WHERE UJT.job_title_id = 61 AND U.status = '1' AND deleted_at IS NULL) AS clientSupportAssistant ON clientSupportAssistant.project_id = P.id LEFT JOIN (SELECT * FROM project_stages WHERE (progress < 100 OR progress IS NULL) AND deleted_at IS NULL AND disabled = '0'  AND title NOT LIKE 'Consultant Stage:%' ORDER BY progress DESC, `order`) AS APS_1 ON APS_1.project_id = P.id  LEFT JOIN (SELECT * FROM project_stages WHERE deleted_at IS NULL AND title NOT LIKE 'Consultant Stage:%' AND disabled = '0' ORDER BY `order` DESC) AS APS_2 ON APS_2.project_id = P.id  WHERE P.status IN('0','2','4','5','6') AND  P.deleted_at IS null ",
+    "stageColumnName": "Active Stage",
+    "test": "SELECT P.*, PC.client_id, LS.name AS state_name, PU.name_first, PU.name_last, PU.email as client_email, PM.name_first AS PM_firstname, PM.name_last AS PM_lastname, clientSupportAssistant.name_first AS clientSupportAssistant_firstName, clientSupportAssistant.name_last AS clientSupportAssistant_lastName,IFNULL(APS_1.end_date, APS_2.end_date) AS stage_end_date,CASE WHEN APS_1.title IS NULL THEN APS_2.title ELSE APS_1.title END AS stage_title,CASE WHEN APS_1.title IS NULL THEN APS_2.progress ELSE APS_1.progress END AS stage_progress,CASE WHEN APS_1.title IS NULL THEN APS_2.id ELSE APS_1.id END AS stage_id FROM project AS P LEFT JOIN project_clients AS PC ON PC.project_id = P.id  LEFT JOIN location_states AS LS ON LS.id = P.project_state_id LEFT JOIN users AS PM ON PM.id = P.user_id LEFT JOIN (SELECT DISTINCT(U.id), PC.project_id, U.name_first, U.name_last, U.email FROM project_clients AS PC INNER JOIN users AS U ON U.id = PC.client_id) AS PU ON PU.project_id = P.id  LEFT JOIN (SELECT DISTINCT(U.id), PT.project_id, U.name_first, U.name_last FROM project_team AS PT INNER JOIN users AS U ON U.id = PT.team_id INNER JOIN user_job_titles AS UJT ON UJT.user_id = U.id WHERE UJT.job_title_id = 61 AND U.status = '1' AND deleted_at IS NULL) AS clientSupportAssistant ON clientSupportAssistant.project_id = P.id LEFT JOIN (SELECT * FROM project_stages WHERE (progress < 100 OR progress IS NULL) AND deleted_at IS NULL AND disabled = '0'  AND title NOT LIKE 'Consultant Stage:%' ORDER BY progress DESC, `order`) AS APS_1 ON APS_1.project_id = P.id  LEFT JOIN (SELECT * FROM project_stages WHERE deleted_at IS NULL AND title NOT LIKE 'Consultant Stage:%' AND disabled = '0' ORDER BY `order` DESC) AS APS_2 ON APS_2.project_id = P.id  WHERE P.status IN('0','2','4','5','6') AND  P.deleted_at IS null  GROUP BY P.ID ORDER BY P.ID DESC LIMIT 0, 30",
+    "total": 162
+}
