@@ -7,6 +7,8 @@ When the page is loaded it makes an API request to fetch the projects (and form)
 `npm install`
 `npm run start`
 
+API credentials are loaded thru environment variables. See Api.js.
+
 ## Architecture
 App.js is the central point. It calls the API and shows / hides the components based on the API response. 
 
